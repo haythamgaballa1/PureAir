@@ -1,0 +1,389 @@
+:root {}
+
+body {
+    --main-Color-one: #39b54a;
+    --main-Color-Two: #0071bc;
+    --main-bgColor-one: #f3f3f3;
+    --main-bgColor-Two: #c8e2fd;
+    --font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    --Card-bg-color: #040D12 ;
+}
+
+* {
+    font-family: var(--font-family);
+    /* border: 1px solid red;           For-Test */
+}
+
+/* global css */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+svg {
+    width: 100%;
+}
+
+.bg-color-one {
+    background-color: var(--main-bgColor-one);
+}
+
+.bg-blue {
+    background-color: var(--main-Color-Two);
+}
+
+#fo-toggle-button {
+    background-color: #39b54a !important;
+}
+
+#fo-conversation-popup-header {
+    background-color: #39b54a !important;
+}
+
+.back-g-blue {
+    background: rgb(0,113,188);
+}
+.back-g-blue-gradient {
+    background-color: #0071bc;
+}
+.back-g-green {
+    background-color: #39b54a;
+}
+.back-g-green-gradient {
+    background: rgb(0,113,188);
+    background: linear-gradient(90deg, rgba(0,113,188,1) 0%, rgb(166, 255, 178) 100%);    
+}
+    
+.color-blue {
+    color: #0071bc;
+}
+/* Start Navbar */
+nav {
+    border-bottom: solid #39b54a 1px;
+    box-shadow: rgba(50, 93, 81, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    z-index: 50000 !important;
+}
+
+
+.navbar-brand img {
+    width: 100px;
+}
+
+.nav-link {
+    font-weight: 400;
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #39b54a;
+    transition: 1s;
+}
+
+.nav-link:hover.nav-link:after {
+
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #0071bc;
+}
+
+.navbar-toggler {
+    border: solid 2px var(--main-Color-one);
+    outline: none;
+
+}
+
+.navbar-toggler:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+.navbar-toggler-icon:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+.svg-inline--fa {
+    padding: 5px;
+}
+
+/* End Navbar */
+/* Start Header */
+.header-title {
+    text-align: center;
+}
+
+.header-title h2 {
+    color: #0071bc;
+}
+
+.header-title h6 {
+    font-size: 240%;
+    width: 70% !important;
+    font-weight: bolder;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: .2;
+    color: #0071bc;
+}
+
+.header {
+    height: 100vh;
+}
+
+.header-Dryer-Vent {
+    height: 100%;
+    background-image: url(../Assets/Imgs/Dryer\ Vent.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.header-content {
+    height: 100%;
+    background-image: url(../Assets/Imgs/Header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay-header {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.overlay-bg {
+    background-color: #39b54a48;
+
+}
+
+.overlay-header h1 {
+    color: #39b54a;
+    /* font-size: 6rem; */
+    font-weight: 600;
+    width: 70%;
+    height: auto;
+    text-align: center;
+}
+
+.overlay-header h2 {
+    color: #39b54a;
+    /* font-size: 200%; */
+    font-weight: 600;
+    width: 70%;
+    height: auto;
+    text-align: center;
+}
+
+.overlay-header h1 span {
+    color: #0071bc;
+    /* font-size: 3rem; */
+}
+
+.overlay-header p {
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-contact {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+}
+
+.btn-color-blue {
+    color: var(--main-Color-Two);
+    border: 2px solid var(--main-Color-Two);
+}
+
+.btn-color-green {
+    color: var(--main-Color-one);
+    border: 2px solid var(--main-Color-one);
+}
+
+.btn-contact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: var(--main-Color-Two);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.btn-contact:hover::before {
+    scale: 3;
+}
+
+.btn-contact:hover {
+    color: white !important;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+}
+
+.btn-contact:active {
+    scale: 1;
+}
+
+/* End Header */
+/* start Services */
+.serv-content{
+    
+    background-color: #DDE6ED;
+}
+.serv-img{
+    position: absolute;
+    top: -40px;
+}
+.serv-img img{
+    border-radius: 50%;
+}
+
+
+
+
+/* end Services */
+/* start Testimonials  */
+.img-testo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+}
+
+.img-testo img {
+    width: 100%;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.testo-content {
+    min-height: 300px;
+    transition: 1s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.579);
+}
+
+.testo-content:hover {
+    .img-testo img {
+        background-color: #0071bc;
+    }
+
+    background-color: white;
+}
+
+.splide__slide p {
+    line-height: 27px;
+}
+
+/* end Testimonials */
+/*  */
+/* Start Contact */
+.Contact {
+    /* background-color: #0071bc; */
+    padding-top: 100px !important;
+
+}
+
+.bg-img {
+    background-image: url(../Assets/Imgs/contact-bg.png);
+    background-position: center center;
+}
+
+.bg-img-two {
+    background-image: url(../Assets/Imgs/Blue-gradient-background.webp);
+    background-position: center center;
+}
+
+.Contact-content .contact-icon {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Contact-content .contact-icon a {
+    color: #0071bc;
+    text-decoration: none;
+}
+
+.Contact-content .contact-icon .fa-location-dot {
+    padding: 5px;
+    background-color: red;
+}
+
+/* End Contact */
+/* Start Footer */
+.Footer {
+    background-color: #0071bc;
+    border-top-left-radius: 300px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    border: solid 1px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.icon:hover {
+    background-color: #39b54a;
+}
+
+.link-animation {
+    padding: 0;
+    transition: 1s;
+}
+
+.link-animation:hover {
+    padding-left: 10px;
+}
+
+/* End Footer */
